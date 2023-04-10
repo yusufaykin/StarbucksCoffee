@@ -1,0 +1,133 @@
+@import "variables";
+@import "modules";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Navbar start
+.navbar {
+  @extend %heading;
+  position: sticky;
+  position: relative;
+  width: 100%;
+  height: 20%;
+  background-color: $bg-color;
+  font-family: $font-family;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.3);
+  &_list {
+    @include Tablets {
+      display: none;
+    }
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 20px 30px;
+
+    &_item {
+      list-style: none;
+      font-weight: 700;
+      cursor: pointer;
+      &:hover {
+        color: $color;
+        transition: all 0.2s;
+      }
+    }
+  }
+  &_bars {
+    opacity: 0;
+    @include Tablets {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 2rem;
+      opacity: 1;
+    }
+  }
+
+  &-logo {
+    width: 80px;
+    margin: 5px 30px;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.3s;
+    }
+  }
+}
+button {
+  padding: 10px 30px;
+  background-color: #fff;
+  border: 1px solid black;
+  outline: none;
+  border-radius: 20px;
+  color: black;
+  cursor: pointer;
+  &:hover {
+    background-color: $color;
+    color: #fff;
+    transition: 0.3s;
+  }
+}
+// Navbar end
+
+// Main Start
+.container {
+  background-color: $color;
+  .row {
+    @extend%heading;
+    height: 80vh;
+    width: 100%;
+
+    .col-1 {
+      width: 50%;
+      font-family: $font-family;
+      text-align: center;
+      margin-left: 100px;
+
+      h1 {
+        @include mobile {
+          font-size: 18px;
+        }
+
+        margin-bottom: 10px;
+        color: #fff;
+      }
+
+      span {
+        color: black;
+      }
+    }
+    .col-2 {
+      @extend %heading;
+      justify-content: center;
+      margin-left: 60px;
+      height: 100%;
+      width: 50%;
+    }
+
+    img {
+      @include mobile {
+        max-width: 150px;
+      }
+      width: 270px;
+      cursor: pointer;
+    }
+  }
+}
+// Main end
+
+// Footer start
+footer {
+  @include mobile {
+    font-size: 14px;
+  }
+  font-family: $font-family;
+  background-color: #cecccc;
+  font-size: large;
+  text-align: center;
+  padding: 20px;
+}
+// Footer end

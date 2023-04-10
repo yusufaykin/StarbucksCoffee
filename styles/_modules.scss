@@ -1,0 +1,31 @@
+@import "variables";
+
+%heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+%botton {
+  font-family: $font-family;
+  padding: 10px 30px;
+  background-color: #fff;
+  border: 1px solid black;
+  outline: none;
+  border-radius: 20px;
+  color: black;
+  cursor: pointer;
+}
+
+// Media-queries start
+@mixin Tablets {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}
+// Media-queries end
