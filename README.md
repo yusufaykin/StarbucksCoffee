@@ -9,7 +9,7 @@ This project includes a beautiful and impressive website created using SCSS. The
 # Links
 
 - [Github Repo](https://github.com/yusufaykin/StarbucksCoffee)
-- [Demo Site](https://starbuckscoffee.netlify.app)
+- [Demo Site](https://starbucksscoffee.netlify.app/)
 
 # Features
 
